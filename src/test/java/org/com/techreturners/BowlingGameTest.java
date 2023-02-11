@@ -49,6 +49,16 @@ public class BowlingGameTest {
         rollFramePins(17, 0);
         assertEquals(16, g.score());
     }
-
+    
+    
+    @Test
+    public void testOneStrike() {
+        Game g = new Game();
+        g.roll(10);     //strike
+        g.roll(3);
+        g.roll(4);
+        rollFramePins(16,0);
+        assertEquals(24,g.score());
+    }
 
 }
